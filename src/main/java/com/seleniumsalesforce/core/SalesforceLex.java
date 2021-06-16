@@ -1,5 +1,10 @@
 package com.seleniumsalesforce.core;
 
-public class SalesforceLex {
+public class SalesforceLex extends DriverInit{
+
+	
+	public SalesforceLex(String text) {
+		super(text);
+	}
 
 }
