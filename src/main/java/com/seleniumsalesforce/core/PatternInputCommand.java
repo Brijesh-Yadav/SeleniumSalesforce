@@ -1,5 +1,7 @@
 package com.seleniumsalesforce.core;
 
+import org.openqa.selenium.WebDriver;
+
 import com.seleniumsalesforce.core.SoftDriver.Click;
 import com.seleniumsalesforce.core.SoftDriver.Input;
 import com.seleniumsalesforce.core.SoftDriver.Pattern;
@@ -7,25 +9,25 @@ import com.seleniumsalesforce.core.SoftDriver.Select;
 
 public class PatternInputCommand implements Pattern, Input{
 
-	String text;
-
-	PatternInputCommand(String text){
-		this.text = text;
+	private WebDriver w_driver ;
+	
+	PatternInputCommand(WebDriver w_driver){
+		this.w_driver = w_driver;
 	}
 	
 	public Select select() {
 		// TODO Auto-generated method stub
-		return new PatternSelectCommand(text);
+		return new PatternSelectCommand(w_driver);
 	}
 
 	public Input input() {
 		// TODO Auto-generated method stub
-		return new PatternInputCommand(text);
+		return new PatternInputCommand(w_driver);
 	}
 
 	public Click click() {
 		// TODO Auto-generated method stub
-		return new PatternClickCommand(text);
+		return new PatternClickCommand(w_driver);
 	}
 
 	public void textfield() {

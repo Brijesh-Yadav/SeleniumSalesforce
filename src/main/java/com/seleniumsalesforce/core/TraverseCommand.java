@@ -42,4 +42,14 @@ public class TraverseCommand implements Click, Traverse{
 		
 	}
 
+	public void button(String text, int obj_prp_index) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void button(String text, int obj_prp_index, int html_str_index) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
