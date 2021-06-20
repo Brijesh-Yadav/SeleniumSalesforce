@@ -58,7 +58,7 @@ public class PatternClickCommand implements Click, Pattern{
 
 	public void button(String text, int obj_prp_index, int html_str_index) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("text "+text);
 	}
 
 }

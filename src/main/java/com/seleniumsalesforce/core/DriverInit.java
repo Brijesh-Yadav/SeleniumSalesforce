@@ -17,7 +17,7 @@ public class DriverInit implements  SoftDriver{
 
 	public SeleniumUtils seleniumutils() {
 		// TODO Auto-generated method stub
-		return null;
+		return new SelnUtils(w_driver);
 	}
 
 	public DateUtils date() {
