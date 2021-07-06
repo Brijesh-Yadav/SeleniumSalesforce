@@ -58,7 +58,7 @@ public class SeleniumUtils{
 
 		for (int i = 0; i < srchString.length(); i++) {
 			try {
-				Thread.sleep(300);
+				Thread.sleep(700);
 			} catch (InterruptedException e){}			
 			char c = srchString.charAt(i);
 			String s = new StringBuilder().append(c).toString();
@@ -298,7 +298,6 @@ public class SeleniumUtils{
 		}else{
 			System.out.println("element is not present");
 			return false;
-//			Assert.fail(element+" element is not present");
 		}
 		return true;
 	}

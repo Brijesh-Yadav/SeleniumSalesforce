@@ -2,7 +2,8 @@ package com.seleniumsalesforce.core;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 public interface SoftDriver {
@@ -22,7 +23,7 @@ public interface SoftDriver {
 	interface ExcelUtils{
 		
 	}
-
+	
 	interface SeleniumUtils{
 		
 		void click(WebElement element);
@@ -35,7 +36,7 @@ public interface SoftDriver {
 		
 		List<WebElement> return_WebElements(String xpath_obj);
 		
-		String get_url_request_responseCode(String url);
+		int get_url_request_responseCode(String url);
 		
 		boolean is_clickable(WebElement element);
 		
@@ -43,31 +44,32 @@ public interface SoftDriver {
 		
 		void js_click(WebElement element);
 		
-		void js_enter(WebElement element);
+		void js_enter(WebElement element,String text);
 		
 		void js_enter_chr_by_chr(WebElement element, String text);
 		
-		boolean js_is_disabled();
+		boolean js_is_readonly(WebElement element);
 		
-		boolean js_is_readonly();
+		void js_set_attribute(WebElement element, String attName, String attValue);
 		
-		void js_set_attribute();
+		void mouse_click(WebElement element);
 		
-		void mouse_click();
+		void press_keyboard_button(int vkEnter);
 		
-		void press_keyboard_button();
+		void press_keyboard_selenium(WebElement element, Keys key);
 		
-		void press_keyboard_selenium();
-		
-		void select_value_from_dropdown();
-		
-		void is_selected();
+		void select_value_from_dropdown( WebElement element,String value);
 		
 		void wait_for_element_to_present(String xpath, int waittime);
+
+		void wait_for_element_to_present(By by, int waittime);
 		
 		void wait_for_element_to_present(ArrayList<String> arraylist, int waittime);
 		
 		void wait_for_element_clickable(WebElement element, int wait_time);
+
+		boolean js_is_disabled(WebElement element);
+		
 	}
 
 	interface Salesforce{
@@ -85,27 +87,62 @@ public interface SoftDriver {
 		Click click();
 		Select select();
 		Input input();
+		Table table();
+		Verify verify();
+		Webelement Webelement();
 	}
-	
+
 	interface Click{
+		ElementFind button();
 		void button(String text);
 		void button(String text,int obj_prp_index);
 		void button(String text,int obj_prp_index,int html_str_index);
 		
 		void textfield(String text);
+		void textfield(String text,int obj_prp_index);
+		void textfield(String text,int obj_prp_index,int html_str_index);
+
 		void link(String text);
+		void link(String text,int obj_prp_index);
+		void link(String text,int obj_prp_index,int html_str_index);
+		
 		void textarea(String text);
+		void textarea(String text,int obj_prp_index);
+		void textarea(String text,int obj_prp_index,int html_str_index);
+
 	}
 	
 	interface Select{
-		void checkbox();
-		void raiobox();
-		void dropdown();
+		void checkbox(String labelname);
+		void checkbox(String labelname, int obj_prp_index);
+		void checkbox(String labelname,int obj_prp_index,int html_str_index);
+
+		void raiobox(String labelname);
+		void raiobox(String labelname, int obj_prp_index);
+		void raiobox(String labelname,int obj_prp_index,int html_str_index);
+
+		void dropdown(String labelname, String value);
+		void dropdown(String labelname, String value, int obj_prp_index);
+		void dropdown(String labelname,String value, int obj_prp_index,int html_str_index);
+
 	}
 	
 	interface Input{
-		void textfield();
-		void textarea();
-		void js_texteditor();
+		void textfield(String label,String value);
+		void textfield(String label,String value,int obj_prp_index);
+		void textfield(String label,String value,int obj_prp_index,int html_str_index);
+		
+		void textarea(String label,String value);
+		void textarea(String label,String value,int obj_prp_index);
+		void textarea(String label,String value,int obj_prp_index,int html_str_index);
+
+		void js_texteditor(String label,String value);
+		void js_texteditor(String label,String value,int obj_prp_index);
+		void js_texteditor(String label,String value,int obj_prp_index,int html_str_index);
+		
+	}
+	
+	interface Verify{
+		
 	}
 }

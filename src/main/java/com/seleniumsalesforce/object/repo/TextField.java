@@ -9,6 +9,7 @@ public class TextField {
 		//added on 19 June 2021
 		obj_list.add("(//input[@title=\""+object_name+"\"])["+index+"]");
 		obj_list.add("(//input[@name=\""+object_name+"\"])["+index+"]");
+		obj_list.add("(//input[@id=\""+object_name+"\"])["+index+"]");
 		obj_list.add("(//span[text()=\""+object_name+"\"]/ancestor::label[1]//input)["+index+"]");	
 		obj_list.add("(//label[text()=\""+object_name+"\"]/..//input[@placeholder='Search People...'])["+index+"]");
 		obj_list.add("(//span[text()=\""+object_name+"\"]/../following-sibling::div//input)[1]");	

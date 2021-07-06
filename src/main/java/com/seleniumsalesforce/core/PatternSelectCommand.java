@@ -1,11 +1,18 @@
 package com.seleniumsalesforce.core;
 
-import org.openqa.selenium.WebDriver;
+import java.util.ArrayList;
+import java.util.HashMap;
 
+import org.openqa.selenium.WebDriver;
 import com.seleniumsalesforce.core.SoftDriver.Click;
 import com.seleniumsalesforce.core.SoftDriver.Input;
 import com.seleniumsalesforce.core.SoftDriver.Pattern;
 import com.seleniumsalesforce.core.SoftDriver.Select;
+import com.seleniumsalesforce.core.SoftDriver.Verify;
+import com.seleniumsalesforce.object.repo.Button;
+import com.seleniumsalesforce.object.repo.Checkbox;
+import com.seleniumsalesforce.object.repo.Dropdown;
+import com.seleniumsalesforce.object.repo.Radiobox;
 
 public class PatternSelectCommand implements Select, Pattern{
 
@@ -30,19 +37,103 @@ public class PatternSelectCommand implements Select, Pattern{
 		return new PatternClickCommand(w_driver);
 	}
 
-	public void checkbox() {
+	@Override
+	public Table table() {
 		// TODO Auto-generated method stub
-		System.out.println("checkbox");
+		return null;
 	}
 
-	public void raiobox() {
+	@Override
+	public Verify verify() {
 		// TODO Auto-generated method stub
-		System.out.println("radiobox");
+		return null;
+	}
+	
+	@Override
+	public Webelement Webelement() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public void dropdown() {
+	@Override
+	public void checkbox(String labelname) {
+		SFutil sl = new SFutil(w_driver);
+		Checkbox ch = new Checkbox();
+		ArrayList<String> repo_ = ch.checkbox_repo(labelname, 1);
+		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
+		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		sl.perform_click(fil_obj_maplist,1);
+	}
+
+	@Override
+	public void checkbox(String labelname, int obj_prp_index) {
+		SFutil sl = new SFutil(w_driver);
+		Checkbox ch = new Checkbox();
+		ArrayList<String> repo_ = ch.checkbox_repo(labelname, obj_prp_index);
+		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
+		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		sl.perform_click(fil_obj_maplist,obj_prp_index);
+	}
+
+	@Override
+	public void checkbox(String labelname, int obj_prp_index, int html_str_index) {
+		SFutil sl = new SFutil(w_driver);
+		Checkbox ch = new Checkbox();
+		ArrayList<String> repo_ = ch.checkbox_repo(labelname, obj_prp_index);
+		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
+		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		sl.perform_click(fil_obj_maplist,obj_prp_index);
+	}
+
+	@Override
+	public void raiobox(String labelname) {
+		SFutil sl = new SFutil(w_driver);
+		Radiobox ch = new Radiobox();
+		ArrayList<String> repo_ = ch.radiobox_repo(labelname, 1);
+		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
+		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		sl.perform_click(fil_obj_maplist,1);
+	}
+
+	@Override
+	public void raiobox(String labelname, int obj_prp_index) {
+		SFutil sl = new SFutil(w_driver);
+		Radiobox ch = new Radiobox();
+		ArrayList<String> repo_ = ch.radiobox_repo(labelname, 1);
+		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
+		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		sl.perform_click(fil_obj_maplist,obj_prp_index);
+		
+	}
+
+	@Override
+	public void raiobox(String labelname, int obj_prp_index, int html_str_index) {
+		SFutil sl = new SFutil(w_driver);
+		Radiobox ch = new Radiobox();
+		ArrayList<String> repo_ = ch.radiobox_repo(labelname, 1);
+		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
+		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		sl.perform_click(fil_obj_maplist,obj_prp_index);
+	}
+
+	@Override
+	public void dropdown(String labelname, String value) {
+		SFutil sl = new SFutil(w_driver);
+		Dropdown ch = new Dropdown();
+		HashMap<String,String> repo_ = ch.dropdown_repo(labelname, 1);
+		
+	}
+
+	@Override
+	public void dropdown(String labelname, String value, int obj_prp_index) {
 		// TODO Auto-generated method stub
-		System.out.println("dropdown");
+		
+	}
+
+	@Override
+	public void dropdown(String labelname, String value, int obj_prp_index, int html_str_index) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

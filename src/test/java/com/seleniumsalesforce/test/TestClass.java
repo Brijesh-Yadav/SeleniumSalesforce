@@ -16,8 +16,10 @@ public class TestClass {
 		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://www.google.com/");
 		SoftDriver sdriver = new SalesforceLex(driver);
-		sdriver.salesforce().pattern().click().button("submit",1,2);
+		sdriver.salesforce().pattern().input().textfield("Search", "Dell Core i3");
 		sdriver.salesforce().pattern().click().button("account");
+		sdriver.salesforce().pattern().verify();
+		sdriver.salesforce().pattern().click().button().return_element("");
 		sdriver.seleniumutils().staticwait(10);
 		driver.close();
 	}
