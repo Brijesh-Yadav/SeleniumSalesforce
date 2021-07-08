@@ -269,15 +269,7 @@ public class SFutil extends SelnUtils{
 		}
 	}
 	
-	public void handle_dropdown(HashMap<String,String> object_list,int html_ind, String value){
-		int check = 0;
-		System.out.println("object_list size "+object_list.size());
-
-		Object[] keys = object_list.keySet().toArray();
-		String dt = object_list.get(keys[1]);
-		
-		System.out.println("first index key "+object_list.get(1)+"  :: value map  ::  "+dt);
-
+	private ArrayList<String> check_multiple_obj(HashMap<String,String>object_list ){
 		int ind = 0;
 		ArrayList<String> list = new ArrayList<String>();
 		for (Map.Entry<String, String> m : object_list.entrySet()) {
@@ -295,23 +287,28 @@ public class SFutil extends SelnUtils{
 			System.out.println("Multiple html strucute are present.."+list.size()+" please specify index...");
 			System.out.println("Function may not work.. if you don't");
 		}
-		
-		System.out.println("adding value based on index");
-		
-		int i=0;
-		HashMap<String,String> index_based =  new HashMap<String, String>();
-		for (Map.Entry<String, String> m : object_list.entrySet()) {
-			if(i==html_ind){
-				String key_ob = m.getKey();
-				String Key_vl = m.getValue();
-				System.out.println("key object "+key_ob + " " + Key_vl+" index "+ind);
-				index_based.put(key_ob, Key_vl);
-			}
-			i++;
-		}
-		System.out.println("adding value based on index ------ ");
+		return list;
+	}
+	
+	public void handle_dropdown(HashMap<String,String> object_list,int html_ind, String value){
+		int check = 0;
+		System.out.println("object_list size "+object_list.size());
+
+		check_multiple_obj(object_list);
 		
 		if(html_ind!=0){
+			System.out.println("adding value based on index ------ ");
+			int i=0;
+			HashMap<String,String> index_based =  new HashMap<String, String>();
+			for (Map.Entry<String, String> m : object_list.entrySet()) {
+				if(i==html_ind){
+					String key_ob = m.getKey();
+					String Key_vl = m.getValue();
+					System.out.println("key object "+key_ob + " " + Key_vl+" index "+i);
+					index_based.put(key_ob, Key_vl);
+				}
+				i++;
+			}
 			System.out.println("under index execution..");
 			for (Map.Entry<String, String> m : index_based.entrySet()) {
 				String key_ob = m.getKey();
