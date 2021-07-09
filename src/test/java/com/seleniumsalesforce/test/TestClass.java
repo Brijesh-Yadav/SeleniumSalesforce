@@ -15,6 +15,7 @@ public class TestClass {
 		// Initialize browser
 		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://www.google.com/");
+		//initialize Salesforce driver
 		SoftDriver sdriver = new SalesforceLex(driver);
 		sdriver.salesforce().pattern().input().textfield("Search", "Dell Core i3");
 		sdriver.salesforce().pattern().click().button("account");

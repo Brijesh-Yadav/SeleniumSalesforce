@@ -135,10 +135,6 @@ public class SeleniumUtils{
 			System.out.println("clicked viaa javascript ..");
 			__staticWait(3);
 			__js_click(driver, element);
-		}catch(Exception e){
-			System.out.println("Exception __click "+e.getMessage());
-			e.printStackTrace();
-//			Assert.fail("Element not found.. "+e.getMessage());
 		}
 	}
 	

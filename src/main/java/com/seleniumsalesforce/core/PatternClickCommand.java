@@ -163,10 +163,5 @@ public class PatternClickCommand implements Click, Pattern{
 		return null;
 	}
 
-	@Override
-	public Webelement Webelement() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 }

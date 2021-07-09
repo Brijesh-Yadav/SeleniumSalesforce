@@ -89,7 +89,6 @@ public interface SoftDriver {
 		Input input();
 		Table table();
 		Verify verify();
-		Webelement Webelement();
 	}
 
 	interface Click{
