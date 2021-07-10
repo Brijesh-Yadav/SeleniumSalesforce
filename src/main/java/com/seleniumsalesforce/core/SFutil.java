@@ -12,6 +12,8 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.seleniumsalesforce.exception.ObjectNotFound;
+
 public class SFutil extends SelnUtils{
 	
 	private WebDriver sdriver;
@@ -39,7 +41,7 @@ public class SFutil extends SelnUtils{
 				System.out.println("arraylist size "+arraylist.size());
 				//print indexing number
 				print_all_html_str(objectlist);
-				System.out.println("none of the html str is present..");
+				throw new ObjectNotFound("none of the html str is present..");
 			}else if(arraylist.size()>=2){
 				//print indexing number
 				print_all_html_str(arraylist);
