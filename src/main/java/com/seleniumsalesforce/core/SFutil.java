@@ -1,7 +1,7 @@
 package com.seleniumsalesforce.core;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import org.openqa.selenium.By;
@@ -79,8 +79,8 @@ public class SFutil extends SelnUtils{
 		return arraylist;
 	}
 	
-	protected HashMap<String,String>process_object_evaluation(ArrayList<String> arraylist){
-		HashMap<String,String> mapobj = new HashMap<String,String>();
+	protected LinkedHashMap<String,String>process_object_evaluation(ArrayList<String> arraylist){
+		LinkedHashMap<String,String> mapobj = new LinkedHashMap<String,String>();
 		for(int i=0; i<arraylist.size(); i++){
 			String xpath_obj = arraylist.get(i);
 			try{
@@ -121,7 +121,7 @@ public class SFutil extends SelnUtils{
 		}
 	}
 	
-	void perform_click(HashMap<String,String> mapobjlist, int index){
+	void perform_click(LinkedHashMap<String,String> mapobjlist, int index){
 		WebElement final_xpath_obj = null ;
 
 		if(mapobjlist.size()>1){
@@ -271,7 +271,7 @@ public class SFutil extends SelnUtils{
 		}
 	}
 	
-	private ArrayList<String> check_multiple_obj(HashMap<String,String>object_list ){
+	private ArrayList<String> check_multiple_obj(LinkedHashMap<String,String>object_list ){
 		int ind = 0;
 		ArrayList<String> list = new ArrayList<String>();
 		for (Map.Entry<String, String> m : object_list.entrySet()) {
@@ -292,7 +292,7 @@ public class SFutil extends SelnUtils{
 		return list;
 	}
 	
-	public void handle_dropdown(HashMap<String,String> object_list,int html_ind, String value){
+	public void handle_dropdown(LinkedHashMap<String,String> object_list,int html_ind, String value){
 		int check = 0;
 		System.out.println("object_list size "+object_list.size());
 
@@ -301,7 +301,7 @@ public class SFutil extends SelnUtils{
 		if(html_ind!=0){
 			System.out.println("adding value based on index ------ ");
 			int i=0;
-			HashMap<String,String> index_based =  new HashMap<String, String>();
+			LinkedHashMap<String,String> index_based =  new LinkedHashMap<String, String>();
 			for (Map.Entry<String, String> m : object_list.entrySet()) {
 				if(i==html_ind){
 					String key_ob = m.getKey();

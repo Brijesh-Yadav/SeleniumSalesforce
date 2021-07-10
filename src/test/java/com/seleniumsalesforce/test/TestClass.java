@@ -1,6 +1,7 @@
 package com.seleniumsalesforce.test;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import com.seleniumsalesforce.core.SalesforceLex;
@@ -18,9 +19,11 @@ public class TestClass {
 		//initialize Salesforce driver
 		SoftDriver sdriver = new SalesforceLex(driver);
 		sdriver.salesforce().pattern().input().textfield("Search", "Dell Core i3");
-		sdriver.salesforce().pattern().click().button("account");
-		sdriver.salesforce().pattern().verify();
-		sdriver.salesforce().pattern().button("").return_element("");
+		sdriver.salesforce().pattern().click().button("account").perform();
+		WebElement element = sdriver.salesforce().pattern().click().button("account").return_element();
+		sdriver.seleniumutils().is_clickable(element);
+		sdriver.salesforce().pattern().verify().text("");
+		sdriver.salesforce().pattern().table();
 		sdriver.salesforce().pattern().click().button("");
 		sdriver.seleniumutils().staticwait(10);
 		driver.close();

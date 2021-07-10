@@ -1,7 +1,7 @@
 package com.seleniumsalesforce.core;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import org.openqa.selenium.WebDriver;
 import com.seleniumsalesforce.core.SoftDriver.Click;
 import com.seleniumsalesforce.core.SoftDriver.Input;
@@ -37,7 +37,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Button.button_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
 		return new Execute(w_driver,"click");
 	}
@@ -46,7 +46,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Button.button_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 	
@@ -54,7 +54,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Button.button_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 	
@@ -62,7 +62,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Link.link_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
 	}
 
@@ -70,7 +70,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = TextArea.textarea_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
 	}
 	
@@ -78,7 +78,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = TextField.textfield_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
 	}
 
@@ -87,7 +87,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = TextField.textfield_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 
@@ -96,7 +96,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = TextField.textfield_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 
@@ -105,7 +105,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Link.link_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 
@@ -114,7 +114,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Link.link_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 
@@ -123,7 +123,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = TextArea.textarea_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 
@@ -132,7 +132,7 @@ public class PatternClickCommand implements Click, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = TextArea.textarea_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 

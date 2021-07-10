@@ -1,7 +1,8 @@
 package com.seleniumsalesforce.core;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 import org.openqa.selenium.WebDriver;
 import com.seleniumsalesforce.core.SoftDriver.Click;
 import com.seleniumsalesforce.core.SoftDriver.Input;
@@ -51,7 +52,7 @@ public class PatternSelectCommand implements Select, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Checkbox.checkbox_repo(labelname, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
 	}
 
@@ -60,7 +61,7 @@ public class PatternSelectCommand implements Select, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Checkbox.checkbox_repo(labelname, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 
@@ -69,7 +70,7 @@ public class PatternSelectCommand implements Select, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Checkbox.checkbox_repo(labelname, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 
@@ -78,7 +79,7 @@ public class PatternSelectCommand implements Select, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Radiobox.radiobox_repo(labelname, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
 	}
 
@@ -87,7 +88,7 @@ public class PatternSelectCommand implements Select, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Radiobox.radiobox_repo(labelname, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 		
 	}
@@ -97,7 +98,7 @@ public class PatternSelectCommand implements Select, Pattern{
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Radiobox.radiobox_repo(labelname, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
-		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
+		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
 	}
 

@@ -299,10 +299,7 @@ public class SalesforceFunction extends SeleniumUtils{
 		int check = 0;
 		HashMap<String,String> object_list = store_lightning_dropdown_object(label_name,value, index);
 		System.out.println("object_list size "+object_list.size());
-		Object[] keys = object_list.keySet().toArray();
-		String dt = object_list.get(keys[1]);
-		
-		System.out.println("first index key "+object_list.get(1)+"  :: value map  ::  "+dt);
+
 		int ind = 0;
 		ArrayList<String> list = new ArrayList<String>();
 		for (Map.Entry<String, String> m : object_list.entrySet()) {
@@ -329,7 +326,7 @@ public class SalesforceFunction extends SeleniumUtils{
 			if(i==html_ind){
 				String key_ob = m.getKey();
 				String Key_vl = m.getValue();
-				System.out.println("key object "+key_ob + " " + Key_vl+" index "+ind);
+				System.out.println("key object "+key_ob + " " + Key_vl);
 				index_based.put(key_ob, Key_vl);
 			}
 			i++;
@@ -388,10 +385,7 @@ public class SalesforceFunction extends SeleniumUtils{
 		int check = 0;
 		HashMap<String,String> object_list = store_lightning_dropdown_object(label_name,value, index);
 		System.out.println("object_list size "+object_list.size());
-		Object[] keys = object_list.keySet().toArray();
-		String dt = object_list.get(keys[1]);
-		
-		System.out.println("first index key "+object_list.get(1)+"  :: value map  ::  "+dt);
+
 		int ind = 0;
 		for (Map.Entry<String, String> m : object_list.entrySet()) {
 			String key_ob = m.getKey();
