@@ -33,8 +33,7 @@ public class PatternInputCommand implements Pattern, Input{
 	@Override
 	public void textfield(String label,String value) {
 		SFutil sl = new SFutil(w_driver);
-		TextField tf = new TextField();
-		ArrayList<String> repo_ = tf.textfield_repo(label, 1);
+		ArrayList<String> repo_ = TextField.textfield_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		String xpath_ele = sl.return_xpath_input(obj_list, 0);
 		sl.enter_condition(xpath_ele, value, 1);
@@ -43,8 +42,7 @@ public class PatternInputCommand implements Pattern, Input{
 	@Override
 	public void textfield(String label,String value, int obj_prp_index) {
 		SFutil sl = new SFutil(w_driver);
-		TextField tf = new TextField();
-		ArrayList<String> repo_ = tf.textfield_repo(label, obj_prp_index);
+		ArrayList<String> repo_ = TextField.textfield_repo(label, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		String xpath_ele = sl.return_xpath_input(obj_list, 0);
 		sl.enter_condition(xpath_ele, value, obj_prp_index);
@@ -53,8 +51,7 @@ public class PatternInputCommand implements Pattern, Input{
 	@Override
 	public void textfield(String label,String value, int obj_prp_index, int html_str_index) {
 		SFutil sl = new SFutil(w_driver);
-		TextField tf = new TextField();
-		ArrayList<String> repo_ = tf.textfield_repo(label, obj_prp_index);
+		ArrayList<String> repo_ = TextField.textfield_repo(label, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		String xpath_ele = sl.return_xpath_input(obj_list, html_str_index);
 		sl.enter_condition(xpath_ele, value, obj_prp_index);
@@ -63,8 +60,7 @@ public class PatternInputCommand implements Pattern, Input{
 	@Override
 	public void textarea(String label,String value) {
 		SFutil sl = new SFutil(w_driver);
-		TextArea ta = new TextArea();
-		ArrayList<String> repo_ = ta.textarea_repo(label, 1);
+		ArrayList<String> repo_ = TextArea.textarea_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		String xpath_ele = sl.return_xpath_input(obj_list, 0);
 		sl.enter_condition(xpath_ele, value, 1);
@@ -73,8 +69,7 @@ public class PatternInputCommand implements Pattern, Input{
 	@Override
 	public void textarea(String label,String value, int obj_prp_index) {
 		SFutil sl = new SFutil(w_driver);
-		TextArea ta = new TextArea();
-		ArrayList<String> repo_ = ta.textarea_repo(label, obj_prp_index);
+		ArrayList<String> repo_ = TextArea.textarea_repo(label, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		String xpath_ele = sl.return_xpath_input(obj_list, 0);
 		sl.enter_condition(xpath_ele, value, obj_prp_index);
@@ -83,8 +78,7 @@ public class PatternInputCommand implements Pattern, Input{
 	@Override
 	public void textarea(String label,String value, int obj_prp_index, int html_str_index) {
 		SFutil sl = new SFutil(w_driver);
-		TextArea ta = new TextArea();
-		ArrayList<String> repo_ = ta.textarea_repo(label, obj_prp_index);
+		ArrayList<String> repo_ = TextArea.textarea_repo(label, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		String xpath_ele = sl.return_xpath_input(obj_list, html_str_index);
 		sl.enter_condition(xpath_ele, value, obj_prp_index);

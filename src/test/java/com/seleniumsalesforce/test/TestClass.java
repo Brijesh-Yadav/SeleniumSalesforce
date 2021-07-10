@@ -20,7 +20,8 @@ public class TestClass {
 		sdriver.salesforce().pattern().input().textfield("Search", "Dell Core i3");
 		sdriver.salesforce().pattern().click().button("account");
 		sdriver.salesforce().pattern().verify();
-		sdriver.salesforce().pattern().click().button().return_element("");
+		sdriver.salesforce().pattern().button("").return_element("");
+		sdriver.salesforce().pattern().click().button("");
 		sdriver.seleniumutils().staticwait(10);
 		driver.close();
 	}

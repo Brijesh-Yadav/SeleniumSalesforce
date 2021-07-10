@@ -23,9 +23,10 @@ public class TraverseCommand implements Click, Traverse{
 		return null;
 	}
 
-	public void button(String text) {
+	public Execute button(String text) {
 		// TODO Auto-generated method stub
 		System.out.println("traverse button");
+		return null;
 	}
 
 	public void textfield(String text) {
@@ -51,12 +52,6 @@ public class TraverseCommand implements Click, Traverse{
 	public void button(String text, int obj_prp_index, int html_str_index) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	@Override
-	public ElementFind button() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
@@ -93,24 +88,6 @@ public class TraverseCommand implements Click, Traverse{
 	public void textarea(String text, int obj_prp_index, int html_str_index) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	@Override
-	public ElementFind textfield() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ElementFind link() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ElementFind textarea() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

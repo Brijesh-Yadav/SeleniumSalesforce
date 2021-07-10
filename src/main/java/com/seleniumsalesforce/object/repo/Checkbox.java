@@ -5,7 +5,7 @@ import java.util.LinkedHashSet;
 
 public class Checkbox {
 	
-	public ArrayList<String> checkbox_repo(String object_name, int index){
+	public static ArrayList<String> checkbox_repo(String object_name, int index){
 
 		LinkedHashSet<String> obj_list = new LinkedHashSet<String>();
 		//added on 19 June 2021

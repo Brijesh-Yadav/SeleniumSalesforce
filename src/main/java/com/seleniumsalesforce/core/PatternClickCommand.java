@@ -16,6 +16,7 @@ import com.seleniumsalesforce.object.repo.TextField;
 public class PatternClickCommand implements Click, Pattern{
 	
 	private WebDriver w_driver ;
+
 	PatternClickCommand(WebDriver w_driver){
 		this.w_driver = w_driver;
 	}
@@ -32,19 +33,18 @@ public class PatternClickCommand implements Click, Pattern{
 		return new PatternInputCommand(w_driver);
 	}
 	
-	public void button(String label) {
+	public Execute button(String label) {
 		SFutil sl = new SFutil(w_driver);
-		Button bt = new Button();
-		ArrayList<String> repo_ = bt.button_repo(label, 1);
+		ArrayList<String> repo_ = Button.button_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
+		return new Execute(w_driver,"click");
 	}
 
 	public void button(String text, int obj_prp_index) {
 		SFutil sl = new SFutil(w_driver);
-		Button bt = new Button();
-		ArrayList<String> repo_ = bt.button_repo(text, obj_prp_index);
+		ArrayList<String> repo_ = Button.button_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -52,8 +52,7 @@ public class PatternClickCommand implements Click, Pattern{
 	
 	public void button(String text, int obj_prp_index, int html_str_index) {
 		SFutil sl = new SFutil(w_driver);
-		Button bt = new Button();
-		ArrayList<String> repo_ = bt.button_repo(text, obj_prp_index);
+		ArrayList<String> repo_ = Button.button_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -61,8 +60,7 @@ public class PatternClickCommand implements Click, Pattern{
 	
 	public void link(String label) {
 		SFutil sl = new SFutil(w_driver);
-		Link ln = new Link();
-		ArrayList<String> repo_ = ln.link_repo(label, 1);
+		ArrayList<String> repo_ = Link.link_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
@@ -70,8 +68,7 @@ public class PatternClickCommand implements Click, Pattern{
 
 	public void textarea(String label) {
 		SFutil sl = new SFutil(w_driver);
-		TextArea ta = new TextArea();
-		ArrayList<String> repo_ = ta.textarea_repo(label, 1);
+		ArrayList<String> repo_ = TextArea.textarea_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
@@ -79,23 +76,16 @@ public class PatternClickCommand implements Click, Pattern{
 	
 	public void textfield(String label) {
 		SFutil sl = new SFutil(w_driver);
-		TextField tf = new TextField();
-		ArrayList<String> repo_ = tf.textfield_repo(label, 1);
+		ArrayList<String> repo_ = TextField.textfield_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
 	}
 
-	public ElementFind button() {
-		// TODO Auto-generated method stub
-		return new ElementFind(w_driver);
-	}
-
 	@Override
 	public void textfield(String text, int obj_prp_index) {
 		SFutil sl = new SFutil(w_driver);
-		TextField tf = new TextField();
-		ArrayList<String> repo_ = tf.textfield_repo(text, obj_prp_index);
+		ArrayList<String> repo_ = TextField.textfield_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -104,8 +94,7 @@ public class PatternClickCommand implements Click, Pattern{
 	@Override
 	public void textfield(String text, int obj_prp_index, int html_str_index) {
 		SFutil sl = new SFutil(w_driver);
-		TextField tf = new TextField();
-		ArrayList<String> repo_ = tf.textfield_repo(text, obj_prp_index);
+		ArrayList<String> repo_ = TextField.textfield_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -114,8 +103,7 @@ public class PatternClickCommand implements Click, Pattern{
 	@Override
 	public void link(String text, int obj_prp_index) {
 		SFutil sl = new SFutil(w_driver);
-		Link ln = new Link();
-		ArrayList<String> repo_ = ln.link_repo(text, obj_prp_index);
+		ArrayList<String> repo_ = Link.link_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -124,8 +112,7 @@ public class PatternClickCommand implements Click, Pattern{
 	@Override
 	public void link(String text, int obj_prp_index, int html_str_index) {
 		SFutil sl = new SFutil(w_driver);
-		Link ln = new Link();
-		ArrayList<String> repo_ = ln.link_repo(text, obj_prp_index);
+		ArrayList<String> repo_ = Link.link_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -134,8 +121,7 @@ public class PatternClickCommand implements Click, Pattern{
 	@Override
 	public void textarea(String text, int obj_prp_index) {
 		SFutil sl = new SFutil(w_driver);
-		TextArea ta = new TextArea();
-		ArrayList<String> repo_ = ta.textarea_repo(text, obj_prp_index);
+		ArrayList<String> repo_ = TextArea.textarea_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -144,8 +130,7 @@ public class PatternClickCommand implements Click, Pattern{
 	@Override
 	public void textarea(String text, int obj_prp_index, int html_str_index) {
 		SFutil sl = new SFutil(w_driver);
-		TextArea ta = new TextArea();
-		ArrayList<String> repo_ = ta.textarea_repo(text, obj_prp_index);
+		ArrayList<String> repo_ = TextArea.textarea_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -159,24 +144,6 @@ public class PatternClickCommand implements Click, Pattern{
 
 	@Override
 	public Verify verify() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ElementFind textfield() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ElementFind link() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ElementFind textarea() {
 		// TODO Auto-generated method stub
 		return null;
 	}

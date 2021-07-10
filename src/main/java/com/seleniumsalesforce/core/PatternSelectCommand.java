@@ -2,8 +2,6 @@ package com.seleniumsalesforce.core;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-
 import org.openqa.selenium.WebDriver;
 import com.seleniumsalesforce.core.SoftDriver.Click;
 import com.seleniumsalesforce.core.SoftDriver.Input;
@@ -11,7 +9,6 @@ import com.seleniumsalesforce.core.SoftDriver.Pattern;
 import com.seleniumsalesforce.core.SoftDriver.Select;
 import com.seleniumsalesforce.core.SoftDriver.Verify;
 import com.seleniumsalesforce.object.repo.Checkbox;
-import com.seleniumsalesforce.object.repo.Dropdown;
 import com.seleniumsalesforce.object.repo.Radiobox;
 
 public class PatternSelectCommand implements Select, Pattern{
@@ -52,8 +49,7 @@ public class PatternSelectCommand implements Select, Pattern{
 	@Override
 	public void checkbox(String labelname) {
 		SFutil sl = new SFutil(w_driver);
-		Checkbox ch = new Checkbox();
-		ArrayList<String> repo_ = ch.checkbox_repo(labelname, 1);
+		ArrayList<String> repo_ = Checkbox.checkbox_repo(labelname, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
@@ -62,8 +58,7 @@ public class PatternSelectCommand implements Select, Pattern{
 	@Override
 	public void checkbox(String labelname, int obj_prp_index) {
 		SFutil sl = new SFutil(w_driver);
-		Checkbox ch = new Checkbox();
-		ArrayList<String> repo_ = ch.checkbox_repo(labelname, obj_prp_index);
+		ArrayList<String> repo_ = Checkbox.checkbox_repo(labelname, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -72,8 +67,7 @@ public class PatternSelectCommand implements Select, Pattern{
 	@Override
 	public void checkbox(String labelname, int obj_prp_index, int html_str_index) {
 		SFutil sl = new SFutil(w_driver);
-		Checkbox ch = new Checkbox();
-		ArrayList<String> repo_ = ch.checkbox_repo(labelname, obj_prp_index);
+		ArrayList<String> repo_ = Checkbox.checkbox_repo(labelname, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -82,8 +76,7 @@ public class PatternSelectCommand implements Select, Pattern{
 	@Override
 	public void raiobox(String labelname) {
 		SFutil sl = new SFutil(w_driver);
-		Radiobox ch = new Radiobox();
-		ArrayList<String> repo_ = ch.radiobox_repo(labelname, 1);
+		ArrayList<String> repo_ = Radiobox.radiobox_repo(labelname, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
@@ -92,8 +85,7 @@ public class PatternSelectCommand implements Select, Pattern{
 	@Override
 	public void raiobox(String labelname, int obj_prp_index) {
 		SFutil sl = new SFutil(w_driver);
-		Radiobox ch = new Radiobox();
-		ArrayList<String> repo_ = ch.radiobox_repo(labelname, 1);
+		ArrayList<String> repo_ = Radiobox.radiobox_repo(labelname, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -103,8 +95,7 @@ public class PatternSelectCommand implements Select, Pattern{
 	@Override
 	public void raiobox(String labelname, int obj_prp_index, int html_str_index) {
 		SFutil sl = new SFutil(w_driver);
-		Radiobox ch = new Radiobox();
-		ArrayList<String> repo_ = ch.radiobox_repo(labelname, 1);
+		ArrayList<String> repo_ = Radiobox.radiobox_repo(labelname, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		HashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
@@ -192,5 +183,6 @@ public class PatternSelectCommand implements Select, Pattern{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }

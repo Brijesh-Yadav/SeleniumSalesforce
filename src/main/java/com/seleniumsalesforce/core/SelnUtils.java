@@ -129,10 +129,15 @@ public class SelnUtils implements SeleniumUtils{
 
 	@Override
 	public boolean is_clickable(WebElement element) {
-		if(element.isDisplayed()==true && element.isEnabled()==true){
-			return true;
+		try{
+			if(element.isDisplayed()==true && element.isEnabled()==true){
+				return true;
+			}else{
+				return false;
+			}
+		}catch(Exception e){
+			return false;
 		}
-		return false;
 	}
 
 	@Override

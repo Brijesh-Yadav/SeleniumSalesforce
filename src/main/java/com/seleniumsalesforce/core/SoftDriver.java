@@ -83,17 +83,13 @@ public interface SoftDriver {
 		Input input();
 	}
 	
-	interface Pattern {
-		Click click();
-		Select select();
-		Input input();
-		Table table();
-		Verify verify();
+	interface Pattern extends SearchContextsf{
+	
 	}
 
 	interface Click{
 		
-		void button(String text);
+		Execute button(String text);
 		void button(String text,int obj_prp_index);
 		void button(String text,int obj_prp_index,int html_str_index);
 		
@@ -109,10 +105,6 @@ public interface SoftDriver {
 		void textarea(String text,int obj_prp_index);
 		void textarea(String text,int obj_prp_index,int html_str_index);
 		
-		ElementFind button();
-		ElementFind textfield();
-		ElementFind link();
-		ElementFind textarea();
 	}
 	
 	interface Select{
