@@ -20,8 +20,9 @@ public class TestClass {
 		SoftDriver sdriver = new SalesforceLex(driver);
 		sdriver.salesforce().pattern().input().textfield("Search", "Dell Core i3");
 		sdriver.salesforce().pattern().click().button("account").perform();
+		sdriver.salesforce().pattern().select().checkbox("");
 		WebElement element = sdriver.salesforce().pattern().click().button("account").return_element();
-		sdriver.seleniumutils().is_clickable(element);
+		sdriver.seleniumutils();
 		sdriver.salesforce().pattern().verify().text("");
 		sdriver.salesforce().pattern().table();
 		sdriver.salesforce().pattern().click().button("");
