@@ -163,5 +163,23 @@ public class PatternClickCommand implements Click, Pattern{
 		return null;
 	}
 
+	@Override
+	public ElementFind textfield() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ElementFind link() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ElementFind textarea() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 }

@@ -120,5 +120,23 @@ public class PatternInputCommand implements Pattern, Input{
 		return null;
 	}
 
+	@Override
+	public ElementFind textfield() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ElementFind textarea() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ElementFind js_texteditor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

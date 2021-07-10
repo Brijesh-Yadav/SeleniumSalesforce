@@ -92,7 +92,7 @@ public interface SoftDriver {
 	}
 
 	interface Click{
-		ElementFind button();
+		
 		void button(String text);
 		void button(String text,int obj_prp_index);
 		void button(String text,int obj_prp_index,int html_str_index);
@@ -108,7 +108,11 @@ public interface SoftDriver {
 		void textarea(String text);
 		void textarea(String text,int obj_prp_index);
 		void textarea(String text,int obj_prp_index,int html_str_index);
-
+		
+		ElementFind button();
+		ElementFind textfield();
+		ElementFind link();
+		ElementFind textarea();
 	}
 	
 	interface Select{
@@ -123,7 +127,20 @@ public interface SoftDriver {
 		void dropdown(String labelname, String value);
 		void dropdown(String labelname, String value, int obj_prp_index);
 		void dropdown(String labelname,String value, int obj_prp_index,int html_str_index);
+		
+		void lightning_dropdown(String labelname, String value);
+		void lightning_dropdown(String labelname, String value, int obj_prp_index);
+		void lightning_dropdown(String labelname,String value, int obj_prp_index,int html_str_index);
+		
+		void lightning_dropdown_type(String labelname, String value);
+		void lightning_dropdown_type(String labelname, String value, int obj_prp_index);
+		void lightning_dropdown_type(String labelname,String value, int obj_prp_index,int html_str_index);
 
+		ElementFind checkbox();
+		ElementFind raiobox();
+		ElementFind dropdown();
+		ElementFind lightning_dropdown();
+		ElementFind lightning_dropdown_type();
 	}
 	
 	interface Input{
@@ -139,9 +156,25 @@ public interface SoftDriver {
 		void js_texteditor(String label,String value,int obj_prp_index);
 		void js_texteditor(String label,String value,int obj_prp_index,int html_str_index);
 		
+		ElementFind textfield();
+		ElementFind textarea();
+		ElementFind js_texteditor();
+		
 	}
 	
 	interface Verify{
+		
+		void text(String text);
+		void text(String text,int obj_prp_index);
+		void text(String text,int obj_prp_index,int html_str_index);
+		
+		void text_fieldvalue(String label,String value);
+		void text_fieldvalue(String label,String value,int obj_prp_index);
+		void text_fieldvalue(String label,String value,int obj_prp_index,int html_str_index);
+		
+		void image(String object);
+		void image(String object,int obj_prp_index);
+		void image(String object,int obj_prp_index,int html_str_index);
 		
 	}
 }

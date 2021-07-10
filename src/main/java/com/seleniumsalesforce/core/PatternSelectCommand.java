@@ -128,4 +128,70 @@ public class PatternSelectCommand implements Select, Pattern{
 		
 	}
 
+	@Override
+	public void lightning_dropdown(String labelname, String value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void lightning_dropdown(String labelname, String value, int obj_prp_index) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void lightning_dropdown(String labelname, String value, int obj_prp_index, int html_str_index) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void lightning_dropdown_type(String labelname, String value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void lightning_dropdown_type(String labelname, String value, int obj_prp_index) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void lightning_dropdown_type(String labelname, String value, int obj_prp_index, int html_str_index) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ElementFind checkbox() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ElementFind raiobox() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ElementFind dropdown() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ElementFind lightning_dropdown() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ElementFind lightning_dropdown_type() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
