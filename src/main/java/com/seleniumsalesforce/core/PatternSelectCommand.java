@@ -2,6 +2,8 @@ package com.seleniumsalesforce.core;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 import org.openqa.selenium.WebDriver;
 import com.seleniumsalesforce.core.SoftDriver.Click;
 import com.seleniumsalesforce.core.SoftDriver.Input;
@@ -110,9 +112,6 @@ public class PatternSelectCommand implements Select, Pattern{
 
 	@Override
 	public void dropdown(String labelname, String value) {
-		SFutil sl = new SFutil(w_driver);
-		Dropdown ch = new Dropdown();
-		HashMap<String,String> repo_ = ch.dropdown_repo(labelname, 1);
 		
 	}
 
