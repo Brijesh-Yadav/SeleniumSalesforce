@@ -12,6 +12,7 @@ import com.seleniumsalesforce.object.repo.Button;
 import com.seleniumsalesforce.object.repo.Link;
 import com.seleniumsalesforce.object.repo.TextArea;
 import com.seleniumsalesforce.object.repo.TextField;
+import com.seleniumsalesforce.sftable.TableButton;
 
 public class PatternClickCommand implements Click, Pattern{
 	
@@ -143,80 +144,9 @@ public class PatternClickCommand implements Click, Pattern{
 	}
 
 	@Override
-	public Execute tablecell(String text) {
+	public TableButton table_button() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public Execute tablecell(String text, int obj_prp_index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, int obj_prp_index, int html_str_index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, String col_number) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, String col_number, int obj_prp_index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, String col_number, int obj_prp_index, int html_str_index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, String col_number, String another_cell) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, String col_number, String another_cell, int obj_prp_index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, String col_number, String another_cell, int obj_prp_index,
-			int html_str_index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, String col_number, String another_cell, String col_number2) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, String col_number, String another_cell, String col_number2,
-			int obj_prp_index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Execute tablecell(String text, String col_number, String another_cell, String col_number2, int obj_prp_index,
-			int html_str_index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	
 }

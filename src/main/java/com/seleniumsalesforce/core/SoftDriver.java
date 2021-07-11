@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
+import com.seleniumsalesforce.sftable.TableButton;
 import com.seleniumsalesforce.sftable.TableCheckbox;
 
 public interface SoftDriver {
@@ -80,9 +81,7 @@ public interface SoftDriver {
 	}
 
 	interface Traverse {
-		Click click();
-		Select select();
-		Input input();
+
 	}
 	
 	interface Pattern extends SearchContextsf{
@@ -91,21 +90,7 @@ public interface SoftDriver {
 
 	interface Click{
 		
-		Execute tablecell(String text);
-		Execute tablecell(String text,int obj_prp_index);
-		Execute tablecell(String text,int obj_prp_index,int html_str_index);
-
-		Execute tablecell(String text, String col_number);
-		Execute tablecell(String text, String col_number,int obj_prp_index);
-		Execute tablecell(String text, String col_number,int obj_prp_index,int html_str_index);
-
-		Execute tablecell(String text, String col_number, String another_cell);
-		Execute tablecell(String text, String col_number,String another_cell,int obj_prp_index);
-		Execute tablecell(String text, String col_number,String another_cell,int obj_prp_index,int html_str_index);
-
-		Execute tablecell(String text, String col_number, String another_cell,String col_number2);
-		Execute tablecell(String text, String col_number,String another_cell,String col_number2,int obj_prp_index);
-		Execute tablecell(String text, String col_number,String another_cell,String col_number2,int obj_prp_index,int html_str_index);
+		TableButton table_button();
 		
 		Execute button(String text);
 		void button(String text,int obj_prp_index);

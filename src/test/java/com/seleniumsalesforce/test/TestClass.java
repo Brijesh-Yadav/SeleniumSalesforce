@@ -1,7 +1,6 @@
 package com.seleniumsalesforce.test;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import com.seleniumsalesforce.core.SalesforceLex;
@@ -24,8 +23,8 @@ public class TestClass {
 		sdriver.salesforce().pattern().click().button("account").return_element();
 		sdriver.seleniumutils();
 		sdriver.salesforce().pattern().verify().text("");
-		sdriver.salesforce().pattern().click().tablecell("","","").perform();
-		sdriver.salesforce().pattern().select().table_checkbox().tablecell("").perform();
+		sdriver.salesforce().pattern().click().
+		table_button().tablecell("").perform();
 		sdriver.seleniumutils().staticwait(10);
 		driver.close();
 	}
