@@ -12,6 +12,8 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.seleniumsalesforce.exception.ButtonDisabled;
+import com.seleniumsalesforce.exception.DropdownValueNotFound;
 import com.seleniumsalesforce.exception.ObjectNotFound;
 
 public class SFutil extends SelnUtils{
@@ -105,6 +107,7 @@ public class SFutil extends SelnUtils{
 		String tagname = element.getTagName();
 		System.out.println("sf__click tagname "+tagname);
 		if("button".equalsIgnoreCase(tagname)){
+			Boolean btnchk = false;
 			for(int i=1; i<15; i++){
 				boolean st = js_is_disabled(element);
 				if(st==false){
@@ -113,8 +116,11 @@ public class SFutil extends SelnUtils{
 					break;
 				}else{
 					System.out.println("button is disabled.. waiting to button get enabled..");
-					staticwait(1);
+					staticwait(2);
 				}	
+			}
+			if(btnchk==false){
+				throw new ButtonDisabled("button is disabled.. after 30 sec wait..");
 			}
 		}else{
 			click(element);
@@ -125,7 +131,8 @@ public class SFutil extends SelnUtils{
 		WebElement final_xpath_obj = null ;
 
 		if(mapobjlist.size()>1){
-			System.out.println("Multiple html structure are present on page for same object.. function may not work... please specify specific index");
+			System.out.println("Multiple html structure are present on page for same object.. "
+					+ "function may not work... please specify specific index");
 		}
 		int rs = 0;
 		//execute with true
@@ -245,6 +252,7 @@ public class SFutil extends SelnUtils{
 		}
 		if(rs!=1){
 			System.out.println("Element not found ");
+			throw new ObjectNotFound("Object not found..");
 		}
 		return final_xpath_obj;
 	}
@@ -353,6 +361,7 @@ public class SFutil extends SelnUtils{
 
 		if (check==0){
 			System.out.println("lightning drop down object not found..");
+			throw new ObjectNotFound("lightning drop down object not found..");
 		}
 		
 	}
@@ -377,6 +386,7 @@ public class SFutil extends SelnUtils{
 		}
 		if(matchrs!=1){
 			System.out.println(value+" not found in drop down list");
+			throw new DropdownValueNotFound(value+" not found in drop down list");
 		}
 	}
 	

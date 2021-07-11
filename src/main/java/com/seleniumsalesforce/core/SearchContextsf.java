@@ -11,4 +11,11 @@ public interface SearchContextsf {
 	Select select();
 	Input input();
 	Verify verify();
+	UploadFile uploadfile();
+	
+	interface UploadFile{
+		
+		void uploadfile();
+	}
 }
+

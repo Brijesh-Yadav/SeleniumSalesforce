@@ -201,5 +201,11 @@ public class PatternInputCommand implements Pattern, Input{
 		return null;
 	}
 
+	@Override
+	public UploadFile uploadfile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
