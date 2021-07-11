@@ -21,11 +21,11 @@ public class TestClass {
 		sdriver.salesforce().pattern().input().textfield("Search", "Dell Core i3");
 		sdriver.salesforce().pattern().click().button("account").perform();
 		sdriver.salesforce().pattern().select().checkbox("");
-		WebElement element = sdriver.salesforce().pattern().click().button("account").return_element();
+		sdriver.salesforce().pattern().click().button("account").return_element();
 		sdriver.seleniumutils();
 		sdriver.salesforce().pattern().verify().text("");
-		sdriver.salesforce().pattern().table();
-		sdriver.salesforce().pattern().click().button("");
+		sdriver.salesforce().pattern().click().tablecell("","","").perform();
+		sdriver.salesforce().pattern().select().table_checkbox().tablecell("").perform();
 		sdriver.seleniumutils().staticwait(10);
 		driver.close();
 	}

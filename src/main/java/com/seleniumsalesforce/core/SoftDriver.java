@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
+import com.seleniumsalesforce.sftable.TableCheckbox;
+
 public interface SoftDriver {
 
 	Salesforce salesforce();
@@ -89,6 +91,22 @@ public interface SoftDriver {
 
 	interface Click{
 		
+		Execute tablecell(String text);
+		Execute tablecell(String text,int obj_prp_index);
+		Execute tablecell(String text,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text, String col_number);
+		Execute tablecell(String text, String col_number,int obj_prp_index);
+		Execute tablecell(String text, String col_number,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text, String col_number, String another_cell);
+		Execute tablecell(String text, String col_number,String another_cell,int obj_prp_index);
+		Execute tablecell(String text, String col_number,String another_cell,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text, String col_number, String another_cell,String col_number2);
+		Execute tablecell(String text, String col_number,String another_cell,String col_number2,int obj_prp_index);
+		Execute tablecell(String text, String col_number,String another_cell,String col_number2,int obj_prp_index,int html_str_index);
+		
 		Execute button(String text);
 		void button(String text,int obj_prp_index);
 		void button(String text,int obj_prp_index,int html_str_index);
@@ -108,6 +126,7 @@ public interface SoftDriver {
 	}
 	
 	interface Select{
+	
 		void checkbox(String labelname);
 		void checkbox(String labelname, int obj_prp_index);
 		void checkbox(String labelname,int obj_prp_index,int html_str_index);
@@ -133,9 +152,13 @@ public interface SoftDriver {
 		ElementFind dropdown();
 		ElementFind lightning_dropdown();
 		ElementFind lightning_dropdown_type();
+
+		TableCheckbox table_checkbox();
+	
 	}
 	
 	interface Input{
+		
 		void textfield(String label,String value);
 		void textfield(String label,String value,int obj_prp_index);
 		void textfield(String label,String value,int obj_prp_index,int html_str_index);
@@ -151,7 +174,23 @@ public interface SoftDriver {
 		ElementFind textfield();
 		ElementFind textarea();
 		ElementFind js_texteditor();
-		
+
+		Execute tablecell(String text);
+		Execute tablecell(String text,int obj_prp_index);
+		Execute tablecell(String text,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text, String col_number);
+		Execute tablecell(String text, String col_number,int obj_prp_index);
+		Execute tablecell(String text, String col_number,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text, String col_number, String another_cell);
+		Execute tablecell(String text, String col_number,String another_cell,int obj_prp_index);
+		Execute tablecell(String text, String col_number,String another_cell,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text, String col_number, String another_cell,String col_number2);
+		Execute tablecell(String text, String col_number,String another_cell,String col_number2,int obj_prp_index);
+		Execute tablecell(String text, String col_number,String another_cell,String col_number2,int obj_prp_index,int html_str_index);
+
 	}
 	
 	interface Verify{
@@ -167,6 +206,23 @@ public interface SoftDriver {
 		void image(String object);
 		void image(String object,int obj_prp_index);
 		void image(String object,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text);
+		Execute tablecell(String text,int obj_prp_index);
+		Execute tablecell(String text,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text, String col_number);
+		Execute tablecell(String text, String col_number,int obj_prp_index);
+		Execute tablecell(String text, String col_number,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text, String col_number, String another_cell);
+		Execute tablecell(String text, String col_number,String another_cell,int obj_prp_index);
+		Execute tablecell(String text, String col_number,String another_cell,int obj_prp_index,int html_str_index);
+
+		Execute tablecell(String text, String col_number, String another_cell,String col_number2);
+		Execute tablecell(String text, String col_number,String another_cell,String col_number2,int obj_prp_index);
+		Execute tablecell(String text, String col_number,String another_cell,String col_number2,int obj_prp_index,int html_str_index);
+
 		
 	}
 }

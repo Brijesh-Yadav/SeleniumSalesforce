@@ -103,12 +103,6 @@ public class PatternInputCommand implements Pattern, Input{
 	}
 
 	@Override
-	public Table table() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public Verify verify() {
 		// TODO Auto-generated method stub
 		return null;
@@ -128,6 +122,81 @@ public class PatternInputCommand implements Pattern, Input{
 
 	@Override
 	public ElementFind js_texteditor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, int obj_prp_index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, int obj_prp_index, int html_str_index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, String col_number) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, String col_number, int obj_prp_index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, String col_number, int obj_prp_index, int html_str_index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, String col_number, String another_cell) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, String col_number, String another_cell, int obj_prp_index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, String col_number, String another_cell, int obj_prp_index,
+			int html_str_index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, String col_number, String another_cell, String col_number2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, String col_number, String another_cell, String col_number2,
+			int obj_prp_index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute tablecell(String text, String col_number, String another_cell, String col_number2, int obj_prp_index,
+			int html_str_index) {
 		// TODO Auto-generated method stub
 		return null;
 	}

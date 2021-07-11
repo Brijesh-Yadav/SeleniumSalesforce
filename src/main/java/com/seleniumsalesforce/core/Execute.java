@@ -30,6 +30,8 @@ public class Execute {
 			System.out.println("select");
 		case "verify":
 			System.out.println("verify");
+		case "table":
+			System.out.println("verify");
 		}
 	}
 	

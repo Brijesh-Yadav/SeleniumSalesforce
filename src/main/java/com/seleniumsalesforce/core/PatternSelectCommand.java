@@ -2,7 +2,6 @@ package com.seleniumsalesforce.core;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-
 import org.openqa.selenium.WebDriver;
 import com.seleniumsalesforce.core.SoftDriver.Click;
 import com.seleniumsalesforce.core.SoftDriver.Input;
@@ -11,6 +10,7 @@ import com.seleniumsalesforce.core.SoftDriver.Select;
 import com.seleniumsalesforce.core.SoftDriver.Verify;
 import com.seleniumsalesforce.object.repo.Checkbox;
 import com.seleniumsalesforce.object.repo.Radiobox;
+import com.seleniumsalesforce.sftable.TableCheckbox;
 
 public class PatternSelectCommand implements Select, Pattern{
 
@@ -33,12 +33,6 @@ public class PatternSelectCommand implements Select, Pattern{
 	public Click click() {
 		// TODO Auto-generated method stub
 		return new PatternClickCommand(w_driver);
-	}
-
-	@Override
-	public Table table() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
@@ -181,6 +175,12 @@ public class PatternSelectCommand implements Select, Pattern{
 
 	@Override
 	public ElementFind lightning_dropdown_type() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TableCheckbox table_checkbox() {
 		// TODO Auto-generated method stub
 		return null;
 	}

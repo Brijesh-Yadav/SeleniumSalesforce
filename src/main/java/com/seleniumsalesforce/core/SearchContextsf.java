@@ -10,8 +10,5 @@ public interface SearchContextsf {
 	Click click();
 	Select select();
 	Input input();
-	Table table();
 	Verify verify();
-
-
 }
