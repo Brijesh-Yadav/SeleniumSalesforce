@@ -39,8 +39,7 @@ public class PatternClickCommand implements Click, Pattern{
 		ArrayList<String> repo_ = Button.button_repo(label, 1);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
-		sl.perform_click(fil_obj_maplist,1);
-		return new Execute(w_driver,"click",fil_obj_maplist);
+		return new Execute(w_driver,"click",fil_obj_maplist,0);
 	}
 
 	public Execute button(String text, int obj_prp_index) {
@@ -48,8 +47,7 @@ public class PatternClickCommand implements Click, Pattern{
 		ArrayList<String> repo_ = Button.button_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
-		sl.perform_click(fil_obj_maplist,obj_prp_index);
-		return new Execute(w_driver,"click",fil_obj_maplist);
+		return new Execute(w_driver,"click",fil_obj_maplist,obj_prp_index);
 	}
 	
 	public Execute button(String text, int obj_prp_index, int html_str_index) {
@@ -57,8 +55,7 @@ public class PatternClickCommand implements Click, Pattern{
 		ArrayList<String> repo_ = Button.button_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
-		sl.perform_click(fil_obj_maplist,obj_prp_index);
-		return new Execute(w_driver,"click",fil_obj_maplist);
+		return new Execute(w_driver,"click",fil_obj_maplist,obj_prp_index);
 	}
 	
 	public void link(String label) {

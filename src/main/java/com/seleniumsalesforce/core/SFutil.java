@@ -128,9 +128,8 @@ public class SFutil extends SelnUtils{
 	}
 	
 	void perform_click(LinkedHashMap<String,String> mapobjlist, int index){
-		WebElement final_xpath_obj = null ;
-
 		if(mapobjlist.size()>1){
+			System.out.println("total present object size "+mapobjlist.size());
 			System.out.println("Multiple html structure are present on page for same object.. "
 					+ "function may not work... please specify specific index");
 		}
@@ -152,7 +151,7 @@ public class SFutil extends SelnUtils{
 					break;
 				}else{
 					rs = 1;
-					final_xpath_obj = elements.get(0);
+					WebElement final_xpath_obj = elements.get(0);
 					sf_click_condition(final_xpath_obj);
 					break;
 				}
@@ -172,7 +171,7 @@ public class SFutil extends SelnUtils{
 						index_ex_cond(key);
 						break;
 					}else{
-						final_xpath_obj = elements.get(0);
+						WebElement final_xpath_obj = elements.get(0);
 						sf_click_condition(final_xpath_obj);
 						break;
 					}
