@@ -12,10 +12,22 @@ public interface SearchContextsf {
 	Input input();
 	Verify verify();
 	UploadFile uploadfile();
+	Iframe iframe();
+	Windows windows();
 	
 	interface UploadFile{
 		
 		void uploadfile();
+	}
+	
+	interface Iframe{
+		
+		void iframe();
+	}
+	
+	interface Windows{
+		
+		void windows();
 	}
 }
 

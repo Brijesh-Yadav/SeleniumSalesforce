@@ -40,23 +40,25 @@ public class PatternClickCommand implements Click, Pattern{
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,1);
-		return new Execute(w_driver,"click");
+		return new Execute(w_driver,"click",fil_obj_maplist);
 	}
 
-	public void button(String text, int obj_prp_index) {
+	public Execute button(String text, int obj_prp_index) {
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Button.button_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, 0);
 		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
+		return new Execute(w_driver,"click",fil_obj_maplist);
 	}
 	
-	public void button(String text, int obj_prp_index, int html_str_index) {
+	public Execute button(String text, int obj_prp_index, int html_str_index) {
 		SFutil sl = new SFutil(w_driver);
 		ArrayList<String> repo_ = Button.button_repo(text, obj_prp_index);
 		ArrayList<String> obj_list = sl.process_multiple_object_check(repo_, html_str_index);
 		LinkedHashMap<String,String> fil_obj_maplist = sl.process_object_evaluation(obj_list);
 		sl.perform_click(fil_obj_maplist,obj_prp_index);
+		return new Execute(w_driver,"click",fil_obj_maplist);
 	}
 	
 	public void link(String label) {
@@ -151,6 +153,18 @@ public class PatternClickCommand implements Click, Pattern{
 
 	@Override
 	public UploadFile uploadfile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iframe iframe() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Windows windows() {
 		// TODO Auto-generated method stub
 		return null;
 	}

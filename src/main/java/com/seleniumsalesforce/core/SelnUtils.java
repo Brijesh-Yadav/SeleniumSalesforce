@@ -30,7 +30,6 @@ public class SelnUtils implements SeleniumUtils{
 	private WebDriver w_driver;
 
 	public SelnUtils(WebDriver w_driver) {
-		// TODO Auto-generated constructor stub
 		this.w_driver = w_driver;
 	}
 

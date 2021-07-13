@@ -93,8 +93,8 @@ public interface SoftDriver {
 		TableButton table_button();
 		
 		Execute button(String text);
-		void button(String text,int obj_prp_index);
-		void button(String text,int obj_prp_index,int html_str_index);
+		Execute button(String text,int obj_prp_index);
+		Execute button(String text,int obj_prp_index,int html_str_index);
 		
 		void textfield(String text);
 		void textfield(String text,int obj_prp_index);

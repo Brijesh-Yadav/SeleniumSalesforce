@@ -191,5 +191,17 @@ public class PatternSelectCommand implements Select, Pattern{
 		return null;
 	}
 
+	@Override
+	public Iframe iframe() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Windows windows() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

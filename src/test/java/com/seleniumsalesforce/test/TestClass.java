@@ -26,6 +26,8 @@ public class TestClass {
 		sdriver.salesforce().pattern().click().
 		table_button().tablecell("").perform();
 		sdriver.seleniumutils().staticwait(10);
+		sdriver.salesforce().pattern().iframe().iframe();
+		sdriver.salesforce().pattern().windows().windows();
 		driver.close();
 	}
 

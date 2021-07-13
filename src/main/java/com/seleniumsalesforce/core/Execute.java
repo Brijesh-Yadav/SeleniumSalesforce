@@ -21,9 +21,11 @@ public class Execute {
 	}
 	
 	public void perform(){
+		SFutil sl = new SFutil(w_driver);
 		switch(action){
 		case "click":
 			System.out.println("click");
+			sl.perform_click(hashmap_obj,1);
 		case "input":
 			System.out.println("input");
 		case "select":
@@ -31,7 +33,7 @@ public class Execute {
 		case "verify":
 			System.out.println("verify");
 		case "table":
-			System.out.println("verify");
+			System.out.println("table");
 		}
 	}
 	
