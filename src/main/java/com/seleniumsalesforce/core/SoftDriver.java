@@ -95,6 +95,8 @@ public interface SoftDriver {
 		Execute button(String text);
 		Execute button(String text,int obj_prp_index);
 		Execute button(String text,int obj_prp_index,int html_str_index);
+		Execute button_contains(String text,int obj_prp_index,int html_str_index);
+		Execute button_attribute(String text,int obj_prp_index,int html_str_index);
 		
 		void textfield(String text);
 		void textfield(String text,int obj_prp_index);
@@ -107,6 +109,10 @@ public interface SoftDriver {
 		void textarea(String text);
 		void textarea(String text,int obj_prp_index);
 		void textarea(String text,int obj_prp_index,int html_str_index);
+
+		void image(String text);
+		void image(String text,int obj_prp_index);
+		void image(String text,int obj_prp_index,int html_str_index);
 		
 	}
 	

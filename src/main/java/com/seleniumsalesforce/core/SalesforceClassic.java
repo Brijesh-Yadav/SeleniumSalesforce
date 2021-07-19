@@ -3,9 +3,9 @@ package com.seleniumsalesforce.core;
 import org.openqa.selenium.WebDriver;
 import com.seleniumsalesforce.core.Repository.Salessforcelex;
 
-public class SalesforceLex extends DriverInit implements Salessforcelex{
+public class SalesforceClassic extends DriverInit implements Salessforcelex{
 
-	public SalesforceLex(WebDriver w_driver) {
+	public SalesforceClassic(WebDriver w_driver) {
 		super(w_driver);
 	}
 

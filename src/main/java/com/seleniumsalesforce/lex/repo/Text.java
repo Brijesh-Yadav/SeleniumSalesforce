@@ -1,11 +1,11 @@
-package com.seleniumsalesforce.object.repo;
+package com.seleniumsalesforce.lex.repo;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 
-public class Dropdown {
+public class Text {
 	
-	public static ArrayList<String> dropdown_repo(String object_name, int index){
+	public static ArrayList<String> text_repo(String object_name, int index){
 		LinkedHashSet<String> obj_list = new LinkedHashSet<String>();
 		//added on 19 June 2021
 		obj_list.add("(//button[text()=\""+object_name+"\"])["+index+"]");
@@ -15,5 +15,6 @@ public class Dropdown {
 		ArrayList<String> arrlist = new ArrayList<String>(obj_list);
 		return arrlist;
 	}
+
 
 }

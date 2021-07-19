@@ -8,10 +8,10 @@ import com.seleniumsalesforce.core.SoftDriver.Input;
 import com.seleniumsalesforce.core.SoftDriver.Pattern;
 import com.seleniumsalesforce.core.SoftDriver.Select;
 import com.seleniumsalesforce.core.SoftDriver.Verify;
-import com.seleniumsalesforce.object.repo.Button;
-import com.seleniumsalesforce.object.repo.Link;
-import com.seleniumsalesforce.object.repo.TextArea;
-import com.seleniumsalesforce.object.repo.TextField;
+import com.seleniumsalesforce.lex.repo.Button;
+import com.seleniumsalesforce.lex.repo.Link;
+import com.seleniumsalesforce.lex.repo.TextArea;
+import com.seleniumsalesforce.lex.repo.TextField;
 import com.seleniumsalesforce.sftable.TableButton;
 
 public class PatternClickCommand implements Click, Pattern{
@@ -164,6 +164,36 @@ public class PatternClickCommand implements Click, Pattern{
 	public Windows windows() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Execute button_contains(String text, int obj_prp_index, int html_str_index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Execute button_attribute(String text, int obj_prp_index, int html_str_index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void image(String text) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void image(String text, int obj_prp_index) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void image(String text, int obj_prp_index, int html_str_index) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

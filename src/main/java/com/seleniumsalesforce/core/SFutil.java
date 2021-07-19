@@ -17,12 +17,9 @@ import com.seleniumsalesforce.exception.DropdownValueNotFound;
 import com.seleniumsalesforce.exception.ObjectNotFound;
 
 public class SFutil extends SelnUtils{
-	
-	private WebDriver sdriver;
-	
-	public SFutil(WebDriver w_driver) {
-		super(w_driver);
-		this.sdriver = w_driver;
+
+	SFutil(WebDriver driver) {
+		super(driver);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -140,7 +137,7 @@ public class SFutil extends SelnUtils{
 			String value = entry.getValue();
 			if(value.equalsIgnoreCase("true")){
 				System.out.println("execute with true key "+key+" value "+value);
-				List<WebElement> elements = sdriver.findElements(By.xpath(key));
+				List<WebElement> elements = driver.findElements(By.xpath(key));
 				if(elements.size()>1){
 					System.out.println("element size "+elements.size());
 					System.out.println("Multiple objects are present on the page with the same object property..");
@@ -166,7 +163,7 @@ public class SFutil extends SelnUtils{
 				System.out.println("key "+key+" value "+value);
 				if(value.equalsIgnoreCase("false")){
 					System.out.println("under false condition");
-					List<WebElement> elements = sdriver.findElements(By.xpath(key));
+					List<WebElement> elements = driver.findElements(By.xpath(key));
 					if(index==0){
 						index_ex_cond(key);
 						break;
@@ -203,7 +200,7 @@ public class SFutil extends SelnUtils{
 		System.out.println("present element size "+objectList1.size());
 		for(int i=0; i<objectList1.size(); i++){
 			String xpath_obj = objectList1.get(i);
-			List<WebElement> elements = sdriver.findElements(By.xpath(xpath_obj));
+			List<WebElement> elements = driver.findElements(By.xpath(xpath_obj));
 			if(elements.size()>0 && elements.size()<2){
 				rs = 1;
 				System.out.println("Element found "+xpath_obj);
@@ -368,7 +365,7 @@ public class SFutil extends SelnUtils{
 	public void sf__handle_dropdown_(WebElement element_click, String _dropdown_option_xpath,String value){
 		click(element_click);
 		staticwait(5);
-		List<WebElement> list_element = sdriver.findElements(By.xpath(_dropdown_option_xpath));
+		List<WebElement> list_element = driver.findElements(By.xpath(_dropdown_option_xpath));
 		int matchrs = 0;
 		for(int i=0; i<list_element.size(); i++){
 			WebElement obj = list_element.get(i);

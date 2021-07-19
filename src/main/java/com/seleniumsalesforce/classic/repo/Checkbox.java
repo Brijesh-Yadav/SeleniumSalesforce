@@ -1,11 +1,12 @@
-package com.seleniumsalesforce.object.repo;
+package com.seleniumsalesforce.classic.repo;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 
-public class TextArea {
+public class Checkbox {
 	
-	public static ArrayList<String> textarea_repo(String object_name, int index){
+	public static ArrayList<String> checkbox_repo(String object_name, int index){
+
 		LinkedHashSet<String> obj_list = new LinkedHashSet<String>();
 		//added on 19 June 2021
 		obj_list.add("(//button[text()=\""+object_name+"\"])["+index+"]");
@@ -14,6 +15,8 @@ public class TextArea {
 		//convert hash to list
 		ArrayList<String> arrlist = new ArrayList<String>(obj_list);
 		return arrlist;
+		
 	}
+
 
 }

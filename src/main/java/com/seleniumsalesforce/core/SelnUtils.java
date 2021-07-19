@@ -22,15 +22,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.seleniumsalesforce.core.SoftDriver.SeleniumUtils;
 
 public class SelnUtils implements SeleniumUtils{
 	
-	private WebDriver w_driver;
-
-	public SelnUtils(WebDriver w_driver) {
-		this.w_driver = w_driver;
+	public WebDriver driver;
+	
+	protected SelnUtils(WebDriver driver){
+		this.driver = driver;
 	}
 
 	@Override
@@ -99,13 +98,13 @@ public class SelnUtils implements SeleniumUtils{
 
 	@Override
 	public WebElement return_Webelement(String xpath_obj) {
-		WebElement element = w_driver.findElement(By.xpath(xpath_obj));
+		WebElement element = driver.findElement(By.xpath(xpath_obj));
 		return element;
 	}
 
 	@Override
 	public List<WebElement> return_WebElements(String xpath_obj) {
-		List<WebElement> element = w_driver.findElements(By.xpath(xpath_obj));
+		List<WebElement> element = driver.findElements(By.xpath(xpath_obj));
 		return element;
 	}
 
@@ -153,7 +152,7 @@ public class SelnUtils implements SeleniumUtils{
 	@Override
 	public void js_click(WebElement element) {
 		try{
-			JavascriptExecutor jsobj = (JavascriptExecutor)w_driver;
+			JavascriptExecutor jsobj = (JavascriptExecutor)driver;
 			jsobj.executeScript("arguments[0].click();", element);
 			System.out.println("clicked on element using javascript");
 		}catch(Exception e){
@@ -164,7 +163,7 @@ public class SelnUtils implements SeleniumUtils{
 	@Override
 	public void js_enter(WebElement element,String text) {
 		try{
-			JavascriptExecutor jsobj = (JavascriptExecutor)w_driver;
+			JavascriptExecutor jsobj = (JavascriptExecutor)driver;
 			jsobj.executeScript("arguments[0].innerHTML= '"+text+"'", element);
 		}catch(Exception e){
 			System.out.println("__js_enter error "+e.getMessage());
@@ -173,7 +172,7 @@ public class SelnUtils implements SeleniumUtils{
 
 	@Override
 	public void js_enter_chr_by_chr(WebElement element, String text) {
-		((JavascriptExecutor) w_driver).executeScript("arguments[0].click();", element);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 		for (int i = 0; i < text.length(); i++) {
 			try {
 				Thread.sleep(700);
@@ -186,14 +185,14 @@ public class SelnUtils implements SeleniumUtils{
 
 	@Override
 	public boolean js_is_disabled(WebElement element) {
-		JavascriptExecutor js = (JavascriptExecutor) w_driver;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		boolean disabled = (Boolean) js.executeScript("return arguments[0].hasAttribute(\"disabled\");", element);
 		return disabled;
 	}
 
 	@Override
 	public boolean js_is_readonly(WebElement element) {
-		JavascriptExecutor js = (JavascriptExecutor) w_driver;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		boolean rd = (Boolean) js.executeScript("return arguments[0].hasAttribute(\"readOnly\");", element);
 		return rd;
 	}
@@ -201,7 +200,7 @@ public class SelnUtils implements SeleniumUtils{
 	@Override
 	public void js_set_attribute(WebElement element, String attName, String attValue) {
 		try{
-			JavascriptExecutor jsobj = (JavascriptExecutor)w_driver;
+			JavascriptExecutor jsobj = (JavascriptExecutor)driver;
 			jsobj.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", 
 	                element, attName, attValue);
 		}catch(Exception e){
@@ -212,7 +211,7 @@ public class SelnUtils implements SeleniumUtils{
 	@Override
 	public void mouse_click(WebElement element) {
 		try{
-			Actions builder = new Actions(w_driver);
+			Actions builder = new Actions(driver);
             Action mouseOverHome = builder.moveToElement(element).click().build();
             mouseOverHome.perform();        
 		}catch(Exception e){
@@ -296,7 +295,7 @@ public class SelnUtils implements SeleniumUtils{
 
 	@Override
 	public void wait_for_element_clickable(WebElement element, int wait_time) {
-		WebDriverWait wait  = new WebDriverWait(w_driver, Duration.ofSeconds(wait_time));
+		WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(wait_time));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		System.out.println("element is present now.");
 	}
@@ -304,7 +303,7 @@ public class SelnUtils implements SeleniumUtils{
 	@Override
 	public void wait_for_element_to_present(By by, int waittime) {
 		// TODO Auto-generated method stub
-		WebDriverWait wait  = new WebDriverWait(w_driver, Duration.ofSeconds(waittime));
+		WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(waittime));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 		System.out.println("element is present now.");
 	}

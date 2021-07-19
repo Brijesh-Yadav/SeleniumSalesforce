@@ -1,4 +1,4 @@
-package com.seleniumsalesforce.object.repo;
+package com.seleniumsalesforce.classic.repo;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;

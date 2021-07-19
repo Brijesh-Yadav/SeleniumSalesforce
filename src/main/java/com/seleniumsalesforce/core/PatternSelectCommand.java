@@ -8,8 +8,8 @@ import com.seleniumsalesforce.core.SoftDriver.Input;
 import com.seleniumsalesforce.core.SoftDriver.Pattern;
 import com.seleniumsalesforce.core.SoftDriver.Select;
 import com.seleniumsalesforce.core.SoftDriver.Verify;
-import com.seleniumsalesforce.object.repo.Checkbox;
-import com.seleniumsalesforce.object.repo.Radiobox;
+import com.seleniumsalesforce.lex.repo.Checkbox;
+import com.seleniumsalesforce.lex.repo.Radiobox;
 import com.seleniumsalesforce.sftable.TableCheckbox;
 
 public class PatternSelectCommand implements Select, Pattern{

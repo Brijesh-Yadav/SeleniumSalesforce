@@ -7,18 +7,12 @@ import org.openqa.selenium.WebElement;
 
 public class ElementFind {
 	
-	private WebDriver w_driver ;
 	private String obj_type ;
 	
-	ElementFind(WebDriver w_driver){
-		this.w_driver = w_driver;
-	}
 	
 	ElementFind(WebDriver w_driver, String obj_type){
-		this.w_driver = w_driver;
 		this.obj_type = obj_type;
 	}
-
 	
 	public WebElement return_element(String label) {
 		WebElement ele = null;

@@ -7,8 +7,8 @@ import com.seleniumsalesforce.core.SoftDriver.Input;
 import com.seleniumsalesforce.core.SoftDriver.Pattern;
 import com.seleniumsalesforce.core.SoftDriver.Select;
 import com.seleniumsalesforce.core.SoftDriver.Verify;
-import com.seleniumsalesforce.object.repo.TextArea;
-import com.seleniumsalesforce.object.repo.TextField;
+import com.seleniumsalesforce.lex.repo.TextArea;
+import com.seleniumsalesforce.lex.repo.TextField;
 
 public class PatternInputCommand implements Pattern, Input{
 

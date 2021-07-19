@@ -14,20 +14,10 @@ public class TestClass {
 		ChromeOptions options = new ChromeOptions();
 		// Initialize browser
 		WebDriver driver = new ChromeDriver(options);
-		driver.get("https://www.google.com/");
+		driver.get("https://brijesh-sl-dev-ed.my.salesforce.com/?ec=302&startURL=%2Fsetup%2FforcecomHomepage.apexp%3Fsetupid%3DForceCom");
 		//initialize Salesforce driver
 		SoftDriver sdriver = new SalesforceLex(driver);
 		sdriver.salesforce().pattern().input().textfield("Search", "Dell Core i3");
-		sdriver.salesforce().pattern().click().button("account").perform();
-		sdriver.salesforce().pattern().select().checkbox("");
-		sdriver.salesforce().pattern().click().button("account").return_element();
-		sdriver.seleniumutils();
-		sdriver.salesforce().pattern().verify().text("");
-		sdriver.salesforce().pattern().click().
-		table_button().tablecell("").perform();
-		sdriver.seleniumutils().staticwait(10);
-		sdriver.salesforce().pattern().iframe().iframe();
-		sdriver.salesforce().pattern().windows().windows();
 		driver.close();
 	}
 

@@ -1,11 +1,11 @@
-package com.seleniumsalesforce.object.repo;
+package com.seleniumsalesforce.classic.repo;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 
-public class TextField {
+public class Text_fieldvalue {
 	
-	public static ArrayList<String> textfield_repo(String object_name, int index){
+	public static ArrayList<String> text_fieldvalue_repo(String object_name, int index){
 		LinkedHashSet<String> obj_list = new LinkedHashSet<String>();
 		//added on 19 June 2021
 		obj_list.add("(//button[text()=\""+object_name+"\"])["+index+"]");

@@ -7,16 +7,16 @@ import com.seleniumsalesforce.core.SoftDriver.Salesforce;
 import com.seleniumsalesforce.core.SoftDriver.Traverse;
 
 public class DriverOptions implements Salesforce{
-
-	private WebDriver w_driver ; 
 	
-	DriverOptions(WebDriver w_driver){
-		this.w_driver = w_driver;
+	private WebDriver driver;
+	
+	DriverOptions(WebDriver driver){
+		this.driver = driver;
 	}
 
 	public Pattern pattern() {
 		// TODO Auto-generated method stub
-		return new PatternClickCommand(w_driver);
+		return new PatternClickCommand(driver);
 	}
 
 	public Traverse traverse() {
